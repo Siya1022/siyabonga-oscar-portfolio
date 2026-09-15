@@ -6,7 +6,7 @@ import { profile } from "./data";
 export function Hero() {
   return (
     <section id="home" className="overflow-hidden">
-      <div className="mx-auto grid min-h-[calc(100svh-4rem)] w-full max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1.55fr)_minmax(16rem,.45fr)] lg:py-24">
+      <div className="mx-auto grid min-h-[38rem] w-full max-w-6xl items-center gap-12 px-5 py-16 sm:min-h-[42rem] sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1.55fr)_minmax(16rem,.45fr)] lg:py-24">
         <div className="min-w-0">
           <p className="font-mono text-[11px] font-medium uppercase text-primary">
             Available for internships and employment
