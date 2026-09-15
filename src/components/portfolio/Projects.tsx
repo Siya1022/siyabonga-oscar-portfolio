@@ -15,7 +15,7 @@ export function Projects() {
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => {
-          const Icon = icons[index % icons.length];
+          const Icon = icons[index % icons.length] ?? FolderKanban;
           return (
             <Card key={project.title} className="flex h-full flex-col transition-shadow hover:shadow-md">
               <CardContent className="flex flex-1 flex-col pt-6">
