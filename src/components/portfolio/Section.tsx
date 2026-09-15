@@ -16,18 +16,17 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("py-16 sm:py-20", className)} aria-labelledby={`${id}-title`}>
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="mb-10 max-w-2xl">
+    <section id={id} className={cn("border-t border-border py-16 sm:py-24", className)} aria-labelledby={`${id}-title`}>
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div className="mb-10 grid gap-4 border-b border-border pb-7 sm:mb-12 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:items-end">
           <h2
             id={`${id}-title`}
-            className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+            className="text-3xl font-bold text-foreground sm:text-4xl"
           >
             {title}
           </h2>
-          <span className="mt-3 block h-1 w-14 rounded-full bg-primary" />
           {subtitle ? (
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">{subtitle}</p>
+            <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:justify-self-end sm:text-base">{subtitle}</p>
           ) : null}
         </div>
         {children}
