@@ -56,25 +56,25 @@ export function Contact() {
       id="contact"
       title="Let's Connect"
       subtitle="I am open to opportunities where I can develop my skills, gain experience, and contribute to a professional team. Feel free to contact me."
-      className="bg-secondary/40"
+      className="bg-foreground text-background [&_h2]:text-background [&_p]:text-background/70"
     >
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
+      <div className="grid overflow-hidden border border-background/20 lg:grid-cols-2">
+        <Card className="rounded-none border-0 bg-background text-foreground">
           <CardContent className="space-y-4 pt-6">
             <a
               href={`mailto:${profile.email}`}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background p-4 transition-colors hover:bg-secondary"
+              className="flex min-w-0 items-center gap-3 border-b border-border p-4 transition-colors hover:bg-secondary"
             >
               <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
-              <span>
+               <span className="min-w-0">
                 <span className="block text-sm font-medium text-foreground">Email</span>
-                <span className="block text-sm text-muted-foreground">{profile.email}</span>
+                 <span className="block truncate text-sm text-muted-foreground">{profile.email}</span>
               </span>
             </a>
 
             <a
               href={`tel:${profile.phone}`}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background p-4 transition-colors hover:bg-secondary"
+              className="flex items-center gap-3 border-b border-border p-4 transition-colors hover:bg-secondary"
             >
               <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
               <span>
@@ -96,7 +96,7 @@ export function Contact() {
               url={profile.github.url}
             />
 
-            <div className="rounded-xl border border-dashed border-border p-4">
+            <div className="border border-dashed border-border p-4">
               <p className="text-sm font-medium text-foreground">Curriculum Vitae</p>
               {profile.cvUrl ? (
                 <Button asChild className="mt-3 w-full">
@@ -118,8 +118,8 @@ export function Contact() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardContent className="pt-6">
+        <Card className="rounded-none border-0 border-t border-background/20 bg-background text-foreground lg:border-l lg:border-t-0">
+          <CardContent className="p-6 sm:p-8">
             <form onSubmit={handleSubmit} noValidate className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
@@ -217,7 +217,7 @@ function ContactLink({
 
   if (!url) {
     return (
-      <div className="flex items-center gap-3 rounded-xl border border-dashed border-border bg-background p-4">
+      <div className="flex items-center gap-3 border-b border-dashed border-border bg-background p-4">
         {content}
       </div>
     );
@@ -228,7 +228,7 @@ function ContactLink({
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center gap-3 rounded-xl border border-border bg-background p-4 transition-colors hover:bg-secondary"
+      className="flex items-center gap-3 border-b border-border bg-background p-4 transition-colors hover:bg-secondary"
     >
       {content}
     </a>
