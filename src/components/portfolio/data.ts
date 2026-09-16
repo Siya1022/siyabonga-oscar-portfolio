@@ -15,8 +15,8 @@ export const profile = {
   // Add the exact profile URLs here when they are ready.
   linkedin: { label: "Siyabonga Mtshali", url: "" },
   github: { label: "Siyabonga Mtshali", url: "" },
-  // Add the CV file path here once the PDF is available (e.g. "/cv.pdf").
-  cvUrl: "",
+  // CV PDF served from the Lovable CDN asset.
+  cvUrl: "/__l5e/assets-v1/de2c7c13-7814-4556-a87b-e4bcf485a8d0/Siyabonga_Mtshali_Cv.pdf",
 };
 
 export const navLinks = [
